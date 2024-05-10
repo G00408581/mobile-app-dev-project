@@ -1,0 +1,8 @@
+{
+  "name": "MobileAppDevProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "f669d5dc"
+}

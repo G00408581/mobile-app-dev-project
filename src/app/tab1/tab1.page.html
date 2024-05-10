@@ -1,17 +1,51 @@
-<ion-header [translucent]="true">
+<ion-header class="header" [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="header">
+      Welcome
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid class="grid-container">
+    <ion-row>
+      <ion-col size="4">
+        <img src="https://www.superprof.ie/blog/wp-content/uploads/2019/03/globe-2269653_640-1.jpg" alt="Image Placeholder"> <!--Images for 1st page + name and surname (USER MUST ENTER NAME IN ORDER TO CONTINUE)-->
+      </ion-col>
+      <ion-col size="4">
+        <img src="https://i.cbc.ca/1.5077459.1553886010!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_940/pets.jpg" alt="Image Placeholder">
+      </ion-col>
+      <ion-col size="4">
+        <img src="https://www.thesprucepets.com/thmb/NtUmBMLymcRzA1Ag4nDsidSkA2o=/4000x0/filters:no_upscale():strip_icc()/smallpets-recirc3_2-1a4df20ff50848e98f5925ac441067f6.jpg" alt="Image Placeholder">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div>
+          <div class="content">
+            <ion-list class="content">
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="name" (input)="checkInput($event)" placeholder="Enter Name"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="surname" placeholder="Enter Surname (Optional)"></ion-input>
+              </ion-item>
+              <ion-button  expand="block" (click)="goToTab2()" [disabled]="!nameInputFilled">Continue</ion-button>
+            </ion-list>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <img src="https://images.ctfassets.net/pc40tpn1u6ef/3A8AOys7Z2vv6dqUM486C0/77aa8f2d89b518a8ce6ea4dfca3e254d/Physics_canva.jpg?w=828&q=75" alt="Image Placeholder">
+      </ion-col>
+      <ion-col size="4">
+        <img src="https://www.pdx.edu/sites/ondeck.web.wdt.pdx.edu/files/styles/academic_program_hero_s/public/2020-08/GR-Geography3.JPG?h=1290464a&itok=Tt66Y4lj" alt="Image Placeholder">
+      </ion-col>
+      <ion-col size="4">
+        <img src="https://promova.com/content/outdoor_activity_51117bd4d1.png" alt="Image Placeholder">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
